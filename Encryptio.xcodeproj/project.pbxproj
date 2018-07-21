@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FA58001E3FCF0DDCAD3E964 /* Pods_Encryptio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 986A1E1FB22FC473E4811DE5 /* Pods_Encryptio.framework */; };
 		863DFF2D2103B22000497E4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DFF2C2103B22000497E4C /* AppDelegate.swift */; };
 		863DFF2F2103B22000497E4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DFF2E2103B22000497E4C /* ViewController.swift */; };
 		863DFF322103B22000497E4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863DFF302103B22000497E4C /* Main.storyboard */; };
@@ -14,6 +15,9 @@
 		863DFF372103B22200497E4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863DFF352103B22200497E4C /* LaunchScreen.storyboard */; };
 		863DFF422103B22200497E4C /* EncryptioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DFF412103B22200497E4C /* EncryptioTests.swift */; };
 		863DFF4D2103B22200497E4C /* EncryptioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DFF4C2103B22200497E4C /* EncryptioUITests.swift */; };
+		863DFF5B2103B2E700497E4C /* Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DFF5A2103B2E700497E4C /* Callback.swift */; };
+		863DFF5D2103B36C00497E4C /* EncryptDecryptUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DFF5C2103B36C00497E4C /* EncryptDecryptUtils.swift */; };
+		863DFF5F2103B41F00497E4C /* KeychainUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DFF5E2103B41F00497E4C /* KeychainUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7770FBEC9D3E0BD09DDD4F85 /* Pods-Encryptio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encryptio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Encryptio/Pods-Encryptio.release.xcconfig"; sourceTree = "<group>"; };
 		863DFF292103B22000497E4C /* Encryptio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encryptio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863DFF2C2103B22000497E4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		863DFF2E2103B22000497E4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,11 @@
 		863DFF482103B22200497E4C /* EncryptioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EncryptioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		863DFF4C2103B22200497E4C /* EncryptioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptioUITests.swift; sourceTree = "<group>"; };
 		863DFF4E2103B22200497E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		863DFF5A2103B2E700497E4C /* Callback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callback.swift; sourceTree = "<group>"; };
+		863DFF5C2103B36C00497E4C /* EncryptDecryptUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptDecryptUtils.swift; sourceTree = "<group>"; };
+		863DFF5E2103B41F00497E4C /* KeychainUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainUtils.swift; sourceTree = "<group>"; };
+		986A1E1FB22FC473E4811DE5 /* Pods_Encryptio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Encryptio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5B8D1935000E1957FD2EE53 /* Pods-Encryptio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encryptio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Encryptio/Pods-Encryptio.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FA58001E3FCF0DDCAD3E964 /* Pods_Encryptio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +85,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		163ACD8D6545254ABFCF018E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5B8D1935000E1957FD2EE53 /* Pods-Encryptio.debug.xcconfig */,
+				7770FBEC9D3E0BD09DDD4F85 /* Pods-Encryptio.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		60EFD80D81477C55E098D60B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				986A1E1FB22FC473E4811DE5 /* Pods_Encryptio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		863DFF202103B22000497E4C = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,8 @@
 				863DFF402103B22200497E4C /* EncryptioTests */,
 				863DFF4B2103B22200497E4C /* EncryptioUITests */,
 				863DFF2A2103B22000497E4C /* Products */,
+				163ACD8D6545254ABFCF018E /* Pods */,
+				60EFD80D81477C55E098D60B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +133,9 @@
 				863DFF332103B22200497E4C /* Assets.xcassets */,
 				863DFF352103B22200497E4C /* LaunchScreen.storyboard */,
 				863DFF382103B22200497E4C /* Info.plist */,
+				863DFF5A2103B2E700497E4C /* Callback.swift */,
+				863DFF5C2103B36C00497E4C /* EncryptDecryptUtils.swift */,
+				863DFF5E2103B41F00497E4C /* KeychainUtils.swift */,
 			);
 			path = Encryptio;
 			sourceTree = "<group>";
@@ -132,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 863DFF512103B22200497E4C /* Build configuration list for PBXNativeTarget "Encryptio" */;
 			buildPhases = (
+				8E07F911B06CF0A5A517D758 /* [CP] Check Pods Manifest.lock */,
 				863DFF252103B22000497E4C /* Sources */,
 				863DFF262103B22000497E4C /* Frameworks */,
 				863DFF272103B22000497E4C /* Resources */,
+				F894A12227F648B8995889EB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,6 +228,7 @@
 				TargetAttributes = {
 					863DFF282103B22000497E4C = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					863DFF3C2103B22200497E4C = {
 						CreatedOnToolsVersion = 9.3;
@@ -251,12 +287,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8E07F911B06CF0A5A517D758 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Encryptio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F894A12227F648B8995889EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Encryptio/Pods-Encryptio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RNCryptor/RNCryptor.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNCryptor.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Encryptio/Pods-Encryptio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		863DFF252103B22000497E4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				863DFF2F2103B22000497E4C /* ViewController.swift in Sources */,
+				863DFF5D2103B36C00497E4C /* EncryptDecryptUtils.swift in Sources */,
+				863DFF5B2103B2E700497E4C /* Callback.swift in Sources */,
+				863DFF5F2103B41F00497E4C /* KeychainUtils.swift in Sources */,
 				863DFF2D2103B22000497E4C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,9 +506,13 @@
 		};
 		863DFF522103B22200497E4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5B8D1935000E1957FD2EE53 /* Pods-Encryptio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56GVCPM9J4;
 				INFOPLIST_FILE = Encryptio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -438,6 +520,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = anum.qudsia.Encryptio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Encryptio/Encryptio-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -445,9 +531,13 @@
 		};
 		863DFF532103B22200497E4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7770FBEC9D3E0BD09DDD4F85 /* Pods-Encryptio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56GVCPM9J4;
 				INFOPLIST_FILE = Encryptio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,6 +545,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = anum.qudsia.Encryptio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Encryptio/Encryptio-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
