@@ -12,7 +12,29 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let message = "My message"
+        
+        let pass = "1111"
+        guard let encryptionKey = try? EncryptDecryptUtils.generateEncryptionKey(withPassword: pass) else {
+            return print("Unable to generate encryptionKey")
+        }
+        
+        print("encryptionKey is \(encryptionKey)")
+        
+        guard let encrMessage = try? EncryptDecryptUtils.encryptMessage(message: message, encryptionKey: encryptionKey) else {
+            return print("Unable to encrypt message")
+        }
+        print("")
+        print("encrMessage is \(encrMessage)")
+        
+        
+        guard let decrMessage = try? EncryptDecryptUtils.decryptMessage(encryptedMessage: encrMessage, encryptionKey: encryptionKey) else {
+            return print("Unable to decryp message")
+        }
+        
+        print("")<
+        print("decrMessage is \(decrMessage)")
     }
 
     override func didReceiveMemoryWarning() {
