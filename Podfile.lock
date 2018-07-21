@@ -1,16 +1,20 @@
 PODS:
+  - CryptoSwift (0.10.0)
   - RNCryptor (5.0.3)
 
 DEPENDENCIES:
+  - CryptoSwift
   - RNCryptor
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CryptoSwift
     - RNCryptor
 
 SPEC CHECKSUMS:
+  CryptoSwift: 6c778d69282bed3b4e975ff97a79d074f20bb011
   RNCryptor: c93d19029dcf7ff160aca0f24d6c9e7b0d82f664
 
-PODFILE CHECKSUM: b927a84396c72cc3e095841be64b11e2e7fd52b8
+PODFILE CHECKSUM: 55369a61ab720d66179f4a4ae04765f279a7443e
 
 COCOAPODS: 1.5.3

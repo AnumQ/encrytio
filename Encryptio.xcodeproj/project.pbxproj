@@ -16,7 +16,7 @@
 		863DFF422103B22200497E4C /* EncryptioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DFF412103B22200497E4C /* EncryptioTests.swift */; };
 		863DFF4D2103B22200497E4C /* EncryptioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DFF4C2103B22200497E4C /* EncryptioUITests.swift */; };
 		863DFF5B2103B2E700497E4C /* Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DFF5A2103B2E700497E4C /* Callback.swift */; };
-		863DFF5D2103B36C00497E4C /* EncryptDecryptUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DFF5C2103B36C00497E4C /* EncryptDecryptUtils.swift */; };
+		863DFF5D2103B36C00497E4C /* RNCryptorEncryptDecryptUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DFF5C2103B36C00497E4C /* RNCryptorEncryptDecryptUtils.swift */; };
 		863DFF5F2103B41F00497E4C /* KeychainUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DFF5E2103B41F00497E4C /* KeychainUtils.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,7 @@
 		863DFF4C2103B22200497E4C /* EncryptioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptioUITests.swift; sourceTree = "<group>"; };
 		863DFF4E2103B22200497E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		863DFF5A2103B2E700497E4C /* Callback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callback.swift; sourceTree = "<group>"; };
-		863DFF5C2103B36C00497E4C /* EncryptDecryptUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptDecryptUtils.swift; sourceTree = "<group>"; };
+		863DFF5C2103B36C00497E4C /* RNCryptorEncryptDecryptUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNCryptorEncryptDecryptUtils.swift; sourceTree = "<group>"; };
 		863DFF5E2103B41F00497E4C /* KeychainUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainUtils.swift; sourceTree = "<group>"; };
 		986A1E1FB22FC473E4811DE5 /* Pods_Encryptio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Encryptio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B8D1935000E1957FD2EE53 /* Pods-Encryptio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encryptio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Encryptio/Pods-Encryptio.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 				863DFF352103B22200497E4C /* LaunchScreen.storyboard */,
 				863DFF382103B22200497E4C /* Info.plist */,
 				863DFF5A2103B2E700497E4C /* Callback.swift */,
-				863DFF5C2103B36C00497E4C /* EncryptDecryptUtils.swift */,
+				863DFF5C2103B36C00497E4C /* RNCryptorEncryptDecryptUtils.swift */,
 				863DFF5E2103B41F00497E4C /* KeychainUtils.swift */,
 			);
 			path = Encryptio;
@@ -313,10 +313,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Encryptio/Pods-Encryptio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RNCryptor/RNCryptor.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNCryptor.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,7 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				863DFF2F2103B22000497E4C /* ViewController.swift in Sources */,
-				863DFF5D2103B36C00497E4C /* EncryptDecryptUtils.swift in Sources */,
+				863DFF5D2103B36C00497E4C /* RNCryptorEncryptDecryptUtils.swift in Sources */,
 				863DFF5B2103B2E700497E4C /* Callback.swift in Sources */,
 				863DFF5F2103B41F00497E4C /* KeychainUtils.swift in Sources */,
 				863DFF2D2103B22000497E4C /* AppDelegate.swift in Sources */,

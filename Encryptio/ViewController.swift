@@ -16,24 +16,24 @@ class ViewController: UIViewController {
         let message = "My message"
         
         let pass = "1111"
-        guard let encryptionKey = try? EncryptDecryptUtils.generateEncryptionKey(withPassword: pass) else {
+        guard let encryptionKey = try? RNCryptorEncryptDecryptUtils.generateEncryptionKey(withPassword: pass) else {
             return print("Unable to generate encryptionKey")
         }
         
         print("encryptionKey is \(encryptionKey)")
         
-        guard let encrMessage = try? EncryptDecryptUtils.encryptMessage(message: message, encryptionKey: encryptionKey) else {
+        guard let encrMessage = try? RNCryptorEncryptDecryptUtils.encryptMessage(message: message, encryptionKey: encryptionKey) else {
             return print("Unable to encrypt message")
         }
         print("")
         print("encrMessage is \(encrMessage)")
         
         
-        guard let decrMessage = try? EncryptDecryptUtils.decryptMessage(encryptedMessage: encrMessage, encryptionKey: encryptionKey) else {
+        guard let decrMessage = try? RNCryptorEncryptDecryptUtils.decryptMessage(encryptedMessage: encrMessage, encryptionKey: encryptionKey) else {
             return print("Unable to decryp message")
         }
         
-        print("")<
+        print("")
         print("decrMessage is \(decrMessage)")
     }
 

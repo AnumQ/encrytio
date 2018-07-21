@@ -4,4 +4,5 @@ use_frameworks!
 
 target 'Encryptio' do
   pod 'RNCryptor'
+  pod 'CryptoSwift'
 end

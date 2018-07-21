@@ -1,5 +1,5 @@
 //
-//  EncryptDecryptUtils.swift
+//  RNCryptorEncryptDecryptUtils.swift
 //  Encryptio
 //
 //  Created by Anum Qudsia on 21/07/2018.
@@ -9,7 +9,7 @@
 import Foundation
 import RNCryptor
 
-class EncryptDecryptUtils: NSObject {
+class RNCryptorEncryptDecryptUtils: NSObject {
 
     static func encryptMessage(message: String, encryptionKey: String) throws -> String {
         let messageData = message.data(using: .utf8)!
