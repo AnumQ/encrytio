@@ -6,8 +6,6 @@
 //  Copyright © 2018 anum.qudsia. All rights reserved.
 //
 
-import Foundation
-
 class KeychainUtils {
     
     static let userId = "11111"
