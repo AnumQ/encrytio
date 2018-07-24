@@ -23,6 +23,10 @@
 /* Begin PBXBuildFile section */
 		4FA58001E3FCF0DDCAD3E964 /* Pods_Encryptio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 986A1E1FB22FC473E4811DE5 /* Pods_Encryptio.framework */; };
 		8606F9BB21073FF2002D0ECD /* CryptoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8606F9BA21073FF2002D0ECD /* CryptoUtils.swift */; };
+		8606F9C521074446002D0ECD /* CryptoEncryptDecryptUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8606F9C421074446002D0ECD /* CryptoEncryptDecryptUtils.swift */; };
+		8606F9C72107456A002D0ECD /* DeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8606F9C62107456A002D0ECD /* DeviceUtils.swift */; };
+		8606F9C9210746D1002D0ECD /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8606F9C8210746D1002D0ECD /* Globals.swift */; };
+		8606F9CB21074700002D0ECD /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8606F9CA21074700002D0ECD /* KeyChainManager.swift */; };
 		863DFF2D2103B22000497E4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DFF2C2103B22000497E4C /* AppDelegate.swift */; };
 		863DFF2F2103B22000497E4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DFF2E2103B22000497E4C /* ViewController.swift */; };
 		863DFF322103B22000497E4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863DFF302103B22000497E4C /* Main.storyboard */; };
@@ -56,6 +60,10 @@
 		7770FBEC9D3E0BD09DDD4F85 /* Pods-Encryptio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encryptio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Encryptio/Pods-Encryptio.release.xcconfig"; sourceTree = "<group>"; };
 		8606F9BA21073FF2002D0ECD /* CryptoUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoUtils.swift; sourceTree = "<group>"; };
 		8606F9BC21074028002D0ECD /* Encryptio-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Encryptio-Bridging-Header.h"; sourceTree = "<group>"; };
+		8606F9C421074446002D0ECD /* CryptoEncryptDecryptUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoEncryptDecryptUtils.swift; sourceTree = "<group>"; };
+		8606F9C62107456A002D0ECD /* DeviceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUtils.swift; sourceTree = "<group>"; };
+		8606F9C8210746D1002D0ECD /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		8606F9CA21074700002D0ECD /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
 		863DFF292103B22000497E4C /* Encryptio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encryptio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863DFF2C2103B22000497E4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		863DFF2E2103B22000497E4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +163,10 @@
 				863DFF5E2103B41F00497E4C /* KeychainUtils.swift */,
 				8606F9BA21073FF2002D0ECD /* CryptoUtils.swift */,
 				8606F9BC21074028002D0ECD /* Encryptio-Bridging-Header.h */,
+				8606F9C421074446002D0ECD /* CryptoEncryptDecryptUtils.swift */,
+				8606F9C62107456A002D0ECD /* DeviceUtils.swift */,
+				8606F9C8210746D1002D0ECD /* Globals.swift */,
+				8606F9CA21074700002D0ECD /* KeyChainManager.swift */,
 			);
 			path = Encryptio;
 			sourceTree = "<group>";
@@ -322,7 +334,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -d \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap\" ]; then\necho \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap directory already exists, so skipping the rest of the script.\"\nexit 0\nfi\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap\"\ncat <<EOF > \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap/module.modulemap\"\nmodule CommonCrypto [system] {\n    header \"${SDKROOT}/usr/include/CommonCrypto/CommonCrypto.h\"\n    export *\n}\nEOF";
+			shellScript = "# This if-statement means we'll only run the main script if the CommonCryptoModuleMap directory doesn't exist\n# Because otherwise the rest of the script causes a full recompile for anything where CommonCrypto is a dependency\n# Do a \"Clean Build Folder\" to remove this directory and trigger the rest of the script to run\nif [ -d \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap\" ]; then\necho \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap directory already exists, so skipping the rest of the script.\"\nexit 0\nfi\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap\"\ncat <<EOF > \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap/module.modulemap\"\nmodule CommonCrypto [system] {\n    header \"${SDKROOT}/usr/include/CommonCrypto/CommonCryptor.h\"\n    export *\n}\nEOF";
 		};
 		8E07F911B06CF0A5A517D758 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -371,10 +383,14 @@
 			files = (
 				863DFF2F2103B22000497E4C /* ViewController.swift in Sources */,
 				863DFF5D2103B36C00497E4C /* RNCryptorEncryptDecryptUtils.swift in Sources */,
+				8606F9C521074446002D0ECD /* CryptoEncryptDecryptUtils.swift in Sources */,
 				8606F9BB21073FF2002D0ECD /* CryptoUtils.swift in Sources */,
 				863DFF5B2103B2E700497E4C /* Callback.swift in Sources */,
+				8606F9C72107456A002D0ECD /* DeviceUtils.swift in Sources */,
 				863DFF5F2103B41F00497E4C /* KeychainUtils.swift in Sources */,
+				8606F9CB21074700002D0ECD /* KeyChainManager.swift in Sources */,
 				863DFF2D2103B22000497E4C /* AppDelegate.swift in Sources */,
+				8606F9C9210746D1002D0ECD /* Globals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +520,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -557,6 +574,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
